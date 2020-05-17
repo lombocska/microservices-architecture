@@ -1,0 +1,18 @@
+version: '3.5'
+
+services:
+  cat-postgres:
+    image: postgres:12.3
+    container_name: "cat-postgres"
+    environment:
+      POSTGRES_USER: cat
+      POSTGRES_PASSWORD: cat
+      POSTGRES_DB: cat
+    ports:
+      - "5432:5432"
+    networks:
+      - example-microservices
+
+networks:
+  example-microservices:
+    driver: bridge

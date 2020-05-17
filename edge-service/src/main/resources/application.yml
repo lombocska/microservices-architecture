@@ -1,0 +1,8 @@
+server:
+  port: ${SERVER_PORT:8081}
+spring:
+  application:
+    name: '@name@'
+    version: '@version@'
+  main:
+    banner-mode: "OFF"
